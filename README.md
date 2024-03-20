@@ -48,12 +48,22 @@ git clone https://github.com/felipesanderp/ignite-node-02-rest-api.git
 cd ignite-node-02-rest-api
 ```
 
-**3º** Instale as dependências do projeto, com um gerenciador de pacotes de preferência própria (aqui estou utilizando o *npm*):
+**3º** Ainda no terminal, instale as dependências do projeto, com um gerenciador de pacotes de preferência própria (aqui estou utilizando o *npm*):
 ```bash 
 npm install
 ```
 
-**4º** Após terminar de instalar as dependências, execute
+**4º** Após terminar de instalar as dependências, execute o comando abaixo para realizar as *migrations*, isto é, criar as tabelas no banco de dados:
+```bash 
+npm run knex migrate:latest
+```
+Uma mensagem de sucesso deverá aparecer no seu terminal, como `Batch 1 run: 2 migrations`
+
+**5º** Agora, é só executar a aplicação e testa-lá em uma ferramenta cliente de API's, como o [Insomnia](https://insomnia.rest/):
+```bash 
+npm run dev
+```
+A aplicação será executada na porta `3333`. Se acontecer algum erro de conflito nesta porta, você poderá modifica-lá no arquivo `index.ts` da pasta `env` ou parar a aplicação que já está utilizando essa porta.
 
 </details>
 
