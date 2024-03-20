@@ -52,14 +52,19 @@ cd ignite-node-02-rest-api
 ```bash 
 npm install
 ```
+**4º** Agora, copie o arquivo `.env.example` na raiz do projeto:
+```bash 
+cp .env.example .env
+``` 
+Um novo arquivo deverá aparecer na raiz do projeto. Você deverá abri-lo utilizando um editor de texto ou código de sua preferência, como o Visual Studio Code e preencher as duas variáveis ambiente `DATABASE_URL` e `DATABASE_CLIENT`. Essas duas variáveis podem variar de acordo com o tipo do banco de dados escolhido: se escolher utilizar o SQLite, o `DATABASE_CLIENT` deverá ser preenchido com *"sqlite"* e a `DATABASE_URL` com algo como *"./db/app.db"*. Se escolher utilizar o PostgreSQL, o `DATABASE_CLIENT` deverá ser preenchido com *"pg"* e o `DATABASE_URL` com uma *string* de conexão do PostgreSQL aceita pelo Knex.js.
 
-**4º** Após terminar de instalar as dependências, execute o comando abaixo para realizar as *migrations*, isto é, criar as tabelas no banco de dados:
+**5º** Após terminar de instalar as dependências e configurar as variáveis ambiente, execute o comando abaixo no terminal para realizar as *migrations*, isto é, criar as tabelas no banco de dados:
 ```bash 
 npm run knex migrate:latest
 ```
 Uma mensagem de sucesso deverá aparecer no seu terminal, como `Batch 1 run: 2 migrations`
 
-**5º** Agora, é só executar a aplicação e testa-lá em uma ferramenta cliente de API's, como o [Insomnia](https://insomnia.rest/):
+**6º** Agora, é só executar a aplicação e testa-lá em uma ferramenta cliente de API's, como o [Insomnia](https://insomnia.rest/):
 ```bash 
 npm run dev
 ```
