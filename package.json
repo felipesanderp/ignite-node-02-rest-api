@@ -14,7 +14,7 @@
     "build": "tsup src --out-dir build"
   },
   "keywords": [],
-  "author": "",
+  "author": "Felipe Sander Panisson",
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
