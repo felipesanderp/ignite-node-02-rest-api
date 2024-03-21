@@ -119,3 +119,9 @@ Se tudo deu certo, o seu terminal deverá exibir as seguintes mensagens:
 - [x] Deve ser possível identificarmos o usuário entre as requisições;
 - [x] O usuário só pode visualizar transações o qual ele criou;
 </details>
+
+## :memo: License
+This project is under the MIT license. See the [LICENSE](https://github.com/felipesanderp/ignite-node-02-rest-api/blob/main/LICENSE) for more information.
+---
+
+Made with ♥ by Felipe Sander :wave: [Get in touch!](https://www.linkedin.com/in/felipesander)
