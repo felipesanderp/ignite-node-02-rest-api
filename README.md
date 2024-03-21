@@ -2,6 +2,8 @@
 
 Essa aplicação simula operações de transações de débito (saída) ou crédito (entrada) de um usuário.
 
+Foi desenvolvida durante o curso de Node.js da [Rocketseat](https://www.rocketseat.com.br/) e tem como objetivo a introdução da utilizaçao de um framework Node.js, o Fastify e outras ferramentas de desenvolvimento, como o TypeScript, banco de dados e testes automatizados.
+
 ## :rocket: Tecnologias
 
 - [Node.js](https://nodejs.org/en)
