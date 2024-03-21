@@ -73,6 +73,37 @@ A aplicação será executada na porta `3333`. Se acontecer algum erro de confli
 </details>
 
 <details>
+<summary>Detalhes dos testes</summary>
+
+### :sparkles: Testes
+
+Os seguintes testes foram desenvolvidos utilizando `supertest` e o `vitest`:
+
+- [x] `should be able to create a new transaction`: Teste para verificar e validar o funcionamento da rota `POST /transactions`. Espera um *statusCode* `201 OK`.
+  
+- [x] `should be able to list all transactions`: Teste para verificar e validar a rota `GET /transactions`. Espera o que o retorno do `response body` seja um objeto de *transactions*.
+  
+- [x] `should be able to list a specific transaction`: Teste para verificar e validar o funcionamento da rota `GET /transactions/:id`. Esse teste cria uma *transaction* e usa o `id` dessa *transaction* para retornar os dados somente dessa *transaction*.
+  
+- [x] `should be able to get the summary`: Teste para verificar e validar a rota `GET /transactions/summary`. Esse teste cria duas *transactions*, uma com o `type` *credit* com o `amount` 5000 e outra como `debit` com o `amount` 1000. Espera que o retorno da resposta seja um objeto contendo uma propriedade `amount` com o valor de 4000.
+
+Para executar os testes, assumindo que já tenha feito os passos 1, 2 e 3 da seção *Executando a aplicação*, execute o seguinte comando no terminal:
+```bash 
+cp .env.test.example .env.test
+```
+Preencha o novo arquivo `.env.test` criado na raiz do projeto com os valores que desejar, mas, por exemplo, para o `DATABASE_CLIENT` você pode deixar o valor como *"sqlite"* e para o `DATABASE_URL` você pode colocar o valor *"./db/test.db"*.
+
+Após realizar a configuração das variáveis ambiente para os testes, execute o seguinte comando no seu terminal:
+```bash 
+npm run test
+```
+Se tudo deu certo, o seu terminal deverá exibir as seguintes mensagens:
+
+![tests](.github/tests%20pass.png)
+
+</details>
+
+<details>
 <summary>Requisitos</summary>
 
 ## RF
